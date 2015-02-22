@@ -1,0 +1,23 @@
+{
+  "name": "MEAN-Workshop",
+  "version": "1.0.0",
+  "description": "Learning MEAN.js Dev",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bobinbc%40gmail.com:music4me@github.com/bobinbc/MEAN-Workshop.git"
+  },
+  "keywords": [
+    "learning",
+    "test"
+  ],
+  "author": "Bobin Cherian",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bobinbc/MEAN-Workshop/issues"
+  },
+  "homepage": "https://github.com/bobinbc/MEAN-Workshop"
+}
