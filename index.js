@@ -51,34 +51,34 @@
 
 // console.log("Chat server running at port "+port +"\n");
 
-//FILE UPLOAD
-var formidable = require('formidable'),
-	http = require('http'),
-	util = require('util'),
-	port = 3663;
+// //FILE UPLOAD
+// var formidable = require('formidable'),
+// 	http = require('http'),
+// 	util = require('util'),
+// 	port = 3663;
 
-http.createServer(function(req,res)
-{
-	if(req.URL == '/upload' && req.method.toLowerCase() == 'post'){
-		//parse a file upload
-		var form = new formidable.IncomingForm();
+// http.createServer(function(req,res)
+// {
+// 	if(req.URL == '/upload' && req.method.toLowerCase() == 'post'){
+// 		//parse a file upload
+// 		var form = new formidable.IncomingForm();
 
-		form.parse(req, function(err, fields, files){
-			res.writeHeader(200,{'contentType': 'text/plain'});
-			res.write('received upload:\n\n');
-			res.end(util.inspect({fields: fields, files: files}));
-		});
+// 		form.parse(req, function(err, fields, files){
+// 			res.writeHeader(200,{'contentType': 'text/plain'});
+// 			res.write('received upload:\n\n');
+// 			res.end(util.inspect({fields: fields, files: files}));
+// 		});
 
-		return;
-	}
+// 		return;
+// 	}
 
-	//show a file upload form
-	res.writeHead(200,{'content-type':'text/html'});
-	res.end(
-			'<form action="/upload" enctype="multipart/form-data" method="post">'+
-			'<input type="text" name="title"><br>'+
-			'<input type="file" name="upload multiple="multiple"><br>' +
-			'<input type="submit" value="Upload">'+
-			'</form>'
-		);
-}).listen(port);
+// 	//show a file upload form
+// 	res.writeHead(200,{'content-type':'text/html'});
+// 	res.end(
+// 			'<form action="/upload" enctype="multipart/form-data" method="post">'+
+// 			'<input type="text" name="title"><br>'+
+// 			'<input type="file" name="upload multiple="multiple"><br>' +
+// 			'<input type="submit" value="Upload">'+
+// 			'</form>'
+// 		);
+// }).listen(port);
